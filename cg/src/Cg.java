@@ -9,6 +9,7 @@ import java.util.Arrays;
 import javafx.application.Application;
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
@@ -20,6 +21,7 @@ import javafx.scene.paint.RadialGradient;
 import javafx.scene.paint.Stop;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -31,14 +33,20 @@ public class Cg extends Application {
   public void start(Stage primaryStage) {
 
     Pane root = new TilePane();
-    root.getChildren().addAll(line(), line(), circle(), new Circle(100, new RadialGradient(0, 50, 50, 50, 50, true, CycleMethod.REPEAT, Arrays.asList(new Stop(.2, Color.GREEN),new Stop(.6, Color.CHARTREUSE),new Stop(.6, Color.RED)))), new Circle(100,Color.RED));
+    
+    Button b = new Button("hello dkfj");
+    b.setLayoutX(-10);
+    root.getChildren().addAll(b,line(), line(), circle(), new Circle(100, new RadialGradient(0, 50, 50, 50, 50, true, CycleMethod.REPEAT, Arrays.asList(new Stop(.2, Color.GREEN),new Stop(.6, Color.CHARTREUSE),new Stop(.6, Color.RED)))), new Circle(100,Color.RED));
 
 
-    root.setStyle("-fx-background-color:black;");
+//    root.setStyle("-fx-background-color:black;");
     Scene scene = new Scene(root, 800, 600);
 
+    scene.getStylesheets().add(this.getClass().getResource("style.css").toExternalForm());
+    
     primaryStage.setTitle("Hello World!");
     primaryStage.setScene(scene);
+    primaryStage.initStyle(StageStyle.TRANSPARENT);
     primaryStage.show();
   }
 
