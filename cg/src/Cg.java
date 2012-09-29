@@ -50,6 +50,7 @@ public class Cg extends Application {
 
 
     Scene scene = new Scene(root, 800, 600,Color.TRANSPARENT);
+ 
 
     scene.getStylesheets().add(this.getClass().getResource("style.css").toExternalForm());
     
