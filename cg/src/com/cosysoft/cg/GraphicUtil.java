@@ -34,6 +34,13 @@ public class GraphicUtil {
     pw.setColor((int) (center.getY() - y), (int) (center.getX() - x), color);
   }
 
+  /**
+   * 
+   * @param center
+   * @param r
+   * @param color
+   * @param pw 
+   */
   public static void drawCircle(Point2D center, int r, Color color, PixelWriter pw) {
     {
       int x = 0, y = r;
