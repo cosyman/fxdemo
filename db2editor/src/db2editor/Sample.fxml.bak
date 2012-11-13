@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml" fx:controller="db2editor.SampleController">
+  <children>
+    <ToolBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <Label fx:id="label" minWidth="69.0" />
+        <Button fx:id="connectBtn2" mnemonicParsing="false" onAction="#handleButtonAction2" text="获取数据" />
+        <ChoiceBox fx:id="styleCB">
+        </ChoiceBox>
+      </items>
+    </ToolBar>
+    <SplitPane dividerPositions="0.32405345211581293" focusTraversable="true" opacity="0.81" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+      <items>
+        <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="100.0" prefHeight="468.0" prefWidth="200.0">
+          <children>
+            <ListView fx:id="tableListView" prefHeight="513.0" prefWidth="253.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleGenerateAction" text="SQL构建器" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
+            </ListView>
+            <HBox id="HBox" alignment="BASELINE_CENTER" minWidth="30.0" prefWidth="30.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <Label minWidth="-1.0" prefWidth="-1.0" text="表" />
+                <TextField fx:id="tableTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+              </children>
+              <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </padding>
+            </HBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TabPane fx:id="tabPane" prefHeight="468.0" prefWidth="486.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@JMetroLightTheme.css" />
+    <URL value="@JMetroDarkTheme.css" />
+    <URL value="@win7glass.css" />
+  </stylesheets>
+</AnchorPane>

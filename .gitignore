@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+/cg/nbproject/private/
+/fxintrobyexample/nbproject/private/
+/db2editor/build/
+/db2editor/nbproject/private/
+/db2sys/build/
+/db2sys/nbproject/private/

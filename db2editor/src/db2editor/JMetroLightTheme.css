@@ -1,0 +1,255 @@
+/* 
+    Document   : JMetroLightTheme
+    Created on : Oct 16, 2012, 6:28:59 PM
+    Author     : Pedro Duque Vieira
+    Description:
+        Light Metro style sheet for use in JavaFX applications
+*/
+
+.background{
+    -fx-background-color: white;
+}
+
+.header{
+    -fx-font-size: 42pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+}
+
+.item-title{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+     
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Push Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: null; 
+    -fx-background-radius: 0;
+
+    -fx-background-color: #cccccc;
+  
+     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: black;
+}
+
+.button:hover{
+    -fx-background-color: #d8d8d8;
+}
+
+.button:pressed, .button:default:hover:pressed
+{
+  -fx-background-color: black;
+  -fx-text-fill: white;
+}
+
+.button:focused
+{
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-style: segments(1, 1);
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;   
+}
+
+.button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #212121;
+}
+
+.button:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover{
+    -fx-background-color: #219297;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Check Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.check-box {
+    -fx-text-fill: black;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #bababa;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-padding: 1;
+}
+
+.check-box .mark {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    
+    -fx-padding:7px;
+    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
+}
+
+.check-box:focused .box{
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: black, #bababa;
+    -fx-border-width: 1, 2;
+    -fx-border-style: segments(1, 1), solid;
+    -fx-border-insets: -3, 0;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: black;
+}
+
+.check-box:indeterminate .mark {
+   -fx-background-color: black; 
+   -fx-background-insets: 2.8; 
+   -fx-padding:7px;
+   -fx-shape: null;
+}
+
+.check-box:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+.check-box:disabled .box
+{
+    -fx-background-color: #cdcdcd;
+    -fx-border-color: #aaa;
+
+}
+
+.check-box:armed .box
+{
+    -fx-background-color: white, black;
+    -fx-background-insets: -1, 2;
+    -fx-background-radius: 0, 0;
+}
+
+.check-box:armed .box .mark
+{
+  -fx-background-color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Radio Button                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.radio-button {
+    -fx-text-fill: #212121;
+}
+
+.radio-button .radio  {
+   -fx-background-color: white;
+   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+   -fx-background-insets: 0;
+   
+   -fx-border-radius: 1.0em;
+   -fx-border-color: #bababa;
+    
+   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #919191;
+}
+
+
+.radio-button .dot {
+   -fx-background-color: transparent;
+   -fx-background-insets: 0;
+   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+   -fx-padding: 6px; /* 3 -- radius of the inner black dot when selected */
+}
+
+.radio-button:selected .dot {
+   -fx-background-color: #212121;
+}
+
+.radio-button:disabled
+{
+    -fx-opacity: 0.5;
+}
+
+.radio-button:disabled .radio
+{
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #d9d9d9;
+}
+
+.radio-button:focused .radio
+{
+   -fx-background-color: white;
+   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+   -fx-background-insets: 0;
+   
+   -fx-border-style: solid, segments(1, 1);
+   -fx-border-radius: 1.0em, 0;
+   -fx-border-color: #bababa, black;
+   -fx-border-insets: 0px, -2px;
+   -fx-border-width: 1px, 1px;
+    
+   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+}
+
+.radio-button:armed .radio {
+    -fx-background-color: #212121;
+    -fx-border-color: #212121;
+}
+
+.radio-button:pressed .radio
+{
+    -fx-background-color: #212121;
+    -fx-border-color: #212121;
+}
+
+.radio-button:pressed:selected .dot
+{
+    -fx-background-color: white;
+}
+
+.radio-button:armed .dot
+{
+    -fx-background-color: black;
+}
+
+.radio-button:focused:armed .radio
+{
+   -fx-background-color: #212121;
+   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+   -fx-background-insets: 0;
+   
+   -fx-border-style: solid, segments(1, 1);
+   -fx-border-radius: 1.0em, 0;
+   -fx-border-color: #212121, #212121;
+   -fx-border-insets: 0px, -2px;
+   -fx-border-width: 1px, 1px;
+    
+   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+}
+
+
+
+
+
